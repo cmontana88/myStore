@@ -5,7 +5,7 @@ import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angu
   templateUrl: './img.component.html',
   styleUrls: ['./img.component.scss']
 })
-export class ImgComponent implements OnInit, OnChanges {
+export class ImgComponent implements OnChanges {
 
   @Input() img: string = '';
   @Output() loaded = new EventEmitter();
@@ -17,10 +17,6 @@ export class ImgComponent implements OnInit, OnChanges {
 
   ngOnChanges(){
     console.log('ngOnChanges', 'imgValue =>', this.img);
-  }
-
-  ngOnInit(): void {
-
   }
 
   imgError(){
